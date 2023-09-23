@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #191b26;
+}
+div.container {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    position: relative;
+    margin: 10% auto 0;
+    width: 90%;
+    height: 500px;
+    background: linear-gradient(0deg, #07080b, rgb(15, 41, 57));
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.border::before,
+.border::after {
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    background: linear-gradient(45deg,
+            #fc0090, #0000ff, #00ff00, #ff0000, #ffff00);
+    background-size: 400%;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    z-index: -1;
+    animation: border 20s linear infinite;
+    content: '';
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+@keyframes border {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+.border::after {
+    filter: blur(15px);
+    opacity: 1;
+}
+h1 {
+    font-size: 35px;
+    color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-transform: capitalize;
+    word-spacing: 1.11px;
+    letter-spacing: 2px;
+    line-height: 1.64em;
+    text-align: -webkit-center;
+    padding: 60px 5px;
+    margin: 40px;
+    bottom: 80px;
+}
+h1 {
+    animation: animate 3.32s linear infinite
+}
+input {
+    width: 24%;
+    margin-bottom: 25px;
+    padding: 0px 30px 10px;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1.29px solid #fff;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    transition: .3s all;
+}
+input:focus {
+    border-bottom: 1.29px solid #ad98f9;
+}
+.btn {
+    background-color: #b9a6ff;
+    display: block;
+    width: 20%;
+    padding: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 21px;
+    font-weight: 600;
+    opacity: 0.8;
+    transition: .2s all;
+    cursor: pointer;
+}
+.btn:hover {
+    opacity: 7;
+}
+h2 {
+    position: relative;
+    font-size: 40px;
+    color: rgb(15, 41, 57);
+    letter-spacing: 3px;
+    word-spacing: 3px;
+}
+h2::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 350px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #fff;
+    animation: call 10s linear infinite;
+    filter: drop-shadow(0 0 20px #fff);
+}
+@keyframes call {
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+@keyframes animate {
+    0% {
+        color: #fff;
+        text-shadow: 0 0 10px #0a7599,
+            0 0 20px rgb(20, 87, 255),
+            0 0 30px rgb(122, 197, 230),
+            0 0 40px #ad98f9,
+            0 0 50px rgb(216, 208, 250);
+    }
+    40%,
+    60% {
+        color: #fff;
+        text-shadow: 0 0 10px #055986,
+            0 0 20px rgb(91, 69, 255),
+            0 0 30px #838dfa,
+            0 0 40px rgb(162, 167, 245),
+            0 0 50px rgb(221, 215, 255);
+    }
+    100% {
+        color: transparent;
+        box-shadow: none;
+        filter: blur(0.1px) hue-rotate(0deg);
+    }
+}
+h4 {
+    padding: 5px;
+    position: absolute;
+    margin: 1px;
+    bottom: -1px;
+    right: -1px;
+    font-weight: 300;
+    word-spacing: 1px;
+    letter-spacing: 2px;
+}
+h4::before {
+    content: attr(data-text);
+    position: absolute;
+    color: rgb(60, 60, 60);
+    width: 350px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: priyoshi 7s linear infinite;
+    filter: drop-shadow(0 0 0px rgb(167, 242, 255));
+}
+@keyframes priyoshi {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+footer {
+    background-color: #01012a;
+}
+.footer {
+    display: flex;
+    padding: 30px 30px;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
+footer .footer-down {
+    text-align: center;
+    color: rgb(122, 197, 230);
+    padding: 55px 0px;
+    margin-top: 75px;
+    font-family: inherit;
+    font-size: 15px;
+    padding-bottom: 15px;
+}
